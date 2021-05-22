@@ -1,130 +1,133 @@
 {
-    "app-id" : "io.github.seadve.Mousai",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "40",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "mousai",
-    "finish-args" : [
-
-        "--share=network",
-        "--device=dri",
-        "--share=ipc",
-        "--socket=pulseaudio",
-        "--socket=fallback-x11",
-        "--socket=wayland"
-    ],
-    "cleanup" : [
-        "/include",
-        "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
-    ],
-    "modules" : [
-      {
-        "name": "python3-requests",
-        "buildsystem": "simple",
-        "build-commands": [
-          "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests\""
-        ],
-          "sources": [
-            {
-              "type": "file",
-              "url": "https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl",
-              "sha256": "b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
-            },
-            {
-              "type": "file",
-              "url": "https://files.pythonhosted.org/packages/39/fc/f91eac5a39a65f75a7adb58eac7fa78871ea9872283fb9c44e6545998134/requests-2.25.0-py2.py3-none-any.whl",
-              "sha256": "e786fa28d8c9154e6a4de5d46a1d921b8749f8b74e28bde23768e5e16eece998"
-            },
-            {
-              "type": "file",
-              "url": "https://files.pythonhosted.org/packages/f5/71/45d36a8df68f3ebb098d6861b2c017f3d094538c0fb98fa61d4dc43e69b9/urllib3-1.26.2-py2.py3-none-any.whl",
-              "sha256": "d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
-            },
-            {
-              "type": "file",
-              "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
-              "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
-            },
-            {
-              "type": "file",
-              "url": "https://files.pythonhosted.org/packages/c1/6f/3d85f0850962279a7e4c622695d7b3171e95ac65308a57d3b29738b27149/certifi-2020.11.8-py2.py3-none-any.whl",
-              "sha256": "1f422849db327d534e3d0c5f02a263458c3955ec0aae4ff09b95f195c59f4edd"
-            }
-          ]
+  "app-id": "io.github.seadve.Mousai",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "40",
+  "sdk": "org.gnome.Sdk",
+  "command": "mousai",
+  "finish-args": [
+    "--share=network",
+    "--device=dri",
+    "--share=ipc",
+    "--socket=pulseaudio",
+    "--socket=fallback-x11",
+    "--socket=wayland"
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/man",
+    "/share/doc",
+    "/share/gtk-doc",
+    "/share/man",
+    "/share/pkgconfig",
+    "*.la",
+    "*.a"
+  ],
+  "modules": [
+    {
+      "name": "python3-requests",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"requests\""
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl",
+          "sha256": "b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
         },
         {
-            "name": "libsass",
-            "cleanup": ["*"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
-                    "sha256": "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "autoreconf -si"
-                    ]
-                }
-            ]
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/39/fc/f91eac5a39a65f75a7adb58eac7fa78871ea9872283fb9c44e6545998134/requests-2.25.0-py2.py3-none-any.whl",
+          "sha256": "e786fa28d8c9154e6a4de5d46a1d921b8749f8b74e28bde23768e5e16eece998"
         },
         {
-            "name": "sassc",
-            "cleanup": ["*"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/sass/sassc/archive/3.6.1.tar.gz",
-                    "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
-                    "commands": [
-                        "autoreconf -si"
-                    ]
-                }
-            ]
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/f5/71/45d36a8df68f3ebb098d6861b2c017f3d094538c0fb98fa61d4dc43e69b9/urllib3-1.26.2-py2.py3-none-any.whl",
+          "sha256": "d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
         },
         {
-            "name": "libadwaita",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "branch": "main"
-                }
-            ]
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl",
+          "sha256": "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
         },
         {
-            "name" : "mousai",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "sources": [
-            {
-              "tag": "v0.4.0",
-              "type": "archive",
-              "url": "https://github.com/SeaDve/Mousai/archive/v0.4.0.tar.gz",
-              "sha256": "0547c2ac26ef931d75fac4c39063d5af5f05a8455a5a773417105546867aa664"
-            }
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/c1/6f/3d85f0850962279a7e4c622695d7b3171e95ac65308a57d3b29738b27149/certifi-2020.11.8-py2.py3-none-any.whl",
+          "sha256": "1f422849db327d534e3d0c5f02a263458c3955ec0aae4ff09b95f195c59f4edd"
+        }
+      ]
+    },
+    {
+      "name": "libsass",
+      "cleanup": [
+        "*"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
+          "sha256": "f9484d9a6df60576e791566eab2f757a97fd414fce01dd41fc0a693ea5db2889"
+        },
+        {
+          "type": "script",
+          "dest-filename": "autogen.sh",
+          "commands": [
+            "autoreconf -si"
           ]
         }
-    ]
+      ]
+    },
+    {
+      "name": "sassc",
+      "cleanup": [
+        "*"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/sass/sassc/archive/3.6.1.tar.gz",
+          "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+        },
+        {
+          "type": "script",
+          "dest-filename": "autogen.sh",
+          "commands": [
+            "autoreconf -si"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "libadwaita",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dgtk_doc=false",
+        "-Dtests=false",
+        "-Dexamples=false",
+        "-Dvapi=false",
+        "-Dglade_catalog=disabled"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+          "branch": "main"
+        }
+      ]
+    },
+    {
+      "name": "mousai",
+      "builddir": true,
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "tag": "v0.4.0",
+          "type": "archive",
+          "url": "https://github.com/SeaDve/Mousai/archive/v0.4.0.tar.gz",
+          "sha256": "0547c2ac26ef931d75fac4c39063d5af5f05a8455a5a773417105546867aa664"
+        }
+      ]
+    }
+  ]
 }
