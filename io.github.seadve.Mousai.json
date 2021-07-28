@@ -112,7 +112,7 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-          "tag" : "1.0.0-alpha.1",
+          "tag": "1.0.0-alpha.1",
           "commit": "faa9f26a2b8a89923c0b83d42e84078f672c19ec"
         }
       ]
@@ -123,10 +123,10 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "tag": "v0.4.2",
+          "tag": "v0.4.3",
           "type": "archive",
-          "url": "https://github.com/SeaDve/Mousai/archive/v0.4.2.tar.gz",
-          "sha256": "f6955ee4c4d63cd9e176314ae6bba82cdf25d3fa5fb30c488c416e41ea9cddc8"
+          "url": "https://github.com/SeaDve/Mousai/archive/v0.4.3.tar.gz",
+          "sha256": "af56d53d7c5de33f793857b001ad34d5bef93c19bceea631a8ad86424b452d94"
         }
       ]
     }
