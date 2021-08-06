@@ -112,7 +112,6 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-          "branch": "main",
           "commit": "8014b17994c1545fad7f5594f1dcdbf0bfc16293"
         }
       ]
