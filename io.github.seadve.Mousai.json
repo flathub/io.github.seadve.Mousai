@@ -122,10 +122,10 @@
       "buildsystem": "meson",
       "sources": [
         {
-          "tag": "v0.5.1",
+          "tag": "v0.5.2",
           "type": "archive",
-          "url": "https://github.com/SeaDve/Mousai/archive/v0.5.1.tar.gz",
-          "sha256": "047cd5caf95beeff37089a47094d581e846d8b0889a83ecbc8e792661b262f51"
+          "url": "https://github.com/SeaDve/Mousai/archive/v0.5.2.tar.gz",
+          "sha256": "cff74a75f37c94600ae020a200d32b626730ad25ef7ab77a0363bf19d1057fae"
         }
       ]
     }
