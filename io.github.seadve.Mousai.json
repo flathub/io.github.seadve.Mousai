@@ -41,6 +41,10 @@
             "version-query": ".tag_name",
             "url-query": "\"https://github.com/SeaDve/Mousai/archive/\\(.tag_name).tar.gz\""
           }
+        },
+        {
+          "type": "patch",
+          "path": "deleted_screenshots.patch"
         }
       ]
     }
