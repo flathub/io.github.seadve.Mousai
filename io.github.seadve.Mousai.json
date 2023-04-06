@@ -1,52 +1,44 @@
 {
-  "app-id": "io.github.seadve.Mousai",
-  "runtime": "org.gnome.Platform",
-  "runtime-version": "44",
-  "sdk": "org.gnome.Sdk",
-  "command": "mousai",
-  "finish-args": [
-    "--share=network",
-    "--device=dri",
-    "--share=ipc",
-    "--socket=pulseaudio",
-    "--socket=fallback-x11",
-    "--socket=wayland"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/man",
-    "/share/doc",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/pkgconfig",
-    "*.la",
-    "*.a"
-  ],
-  "modules": [
-    "python3-requests.json",
-    {
-      "name": "mousai",
-      "builddir": true,
-      "buildsystem": "meson",
-      "sources": [
+    "id": "io.github.seadve.Mousai",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "44",
+    "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
+    "command": "mousai",
+    "finish-args": [
+        "--device=dri",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=pulseaudio",
+        "--socket=wayland"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
+    },
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
         {
-          "tag": "v0.6.6",
-          "type": "archive",
-          "url": "https://github.com/SeaDve/Mousai/archive/v0.6.6.tar.gz",
-          "sha256": "a1e5cb29ad16405abcab8b5e1eec82fc170e5f535f8c55b57f18c80acb18a0ae",
-          "x-checker-data": {
-            "type": "json",
-            "url": "https://api.github.com/repos/SeaDve/Mousai/releases/latest",
-            "version-query": ".tag_name",
-            "url-query": "\"https://github.com/SeaDve/Mousai/archive/\\(.tag_name).tar.gz\""
-          }
-        },
-        {
-          "type": "patch",
-          "path": "deleted_screenshots.patch"
+            "name": "mousai",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/SeaDve/Mousai/releases/download/v0.7.0/mousai-0.7.0.tar.xz",
+                    "sha256": "87f8d97c8b1b72707f20b11eb23877fdbee1558132dd5c86b9b0d32c0501675d"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
