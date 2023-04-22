@@ -35,8 +35,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/SeaDve/Mousai/releases/download/v0.7.2/mousai-0.7.2.tar.xz",
-                    "sha256": "5fb5a34d733bf248470813639ee36aad1012f69f149284f1ef5a0aa890b48521",
+                    "url": "https://github.com/SeaDve/Mousai/releases/download/v0.7.3/mousai-0.7.3.tar.xz",
+                    "sha256": "6fd6f452efe90ec32d04bbe84fb24a988516a85fe7cdb9a50f04aacdcc1021a8",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/SeaDve/Mousai/releases/latest",
