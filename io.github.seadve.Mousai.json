@@ -1,7 +1,7 @@
 {
     "id": "io.github.seadve.Mousai",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "47",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -35,8 +35,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/SeaDve/Mousai/releases/download/v0.7.7/mousai-0.7.7.tar.xz",
-                    "sha256": "7e3c26dcb546d226474edce91504b23da4c9e61f0249edf255699024351f7eb4",
+                    "url": "https://github.com/SeaDve/Mousai/releases/download/v0.7.8/mousai-0.7.8.tar.xz",
+                    "sha256": "af67ace9feccb13ec3a5d3891431985684fa42f623dad3b6032db1369e6c7a3d",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/SeaDve/Mousai/releases/latest",
